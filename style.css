@@ -28,8 +28,16 @@ header h1 {
 
 #registers {
     margin: 0 auto;
-    width: 600px;
+    width: 700px;
     padding: 80px;
+}
+
+#registers .register-container {
+    /* o height limita a altura da sessao e o overflow cria a barra de rolagem  */
+    height: 600px;
+    overflow-y: scroll;
+    /* afasta o conteiner de registros do h2 */
+    margin-top: 15px;
 }
 
 .register {
@@ -87,6 +95,11 @@ header h1 {
 }
 
 footer {
+    background-color: black;
+    padding: 20px;
+}
+
+footer p {
     /* centralizar o elemento no centro da pag */
     margin: 0 auto;
     width: fit-content;
