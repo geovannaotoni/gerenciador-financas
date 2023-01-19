@@ -1,0 +1,106 @@
+* {
+    /*retira todas as configuraçoes que podem vir do navegador*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(30, 38, 35);
+    color: rgb(210, 235, 225);
+}
+
+header {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(35,113,81);
+    /* text-align: center; as estilizaçoes do header h1 substituem o text-align*/
+    padding: 20px;
+}
+
+header h1 {
+    /* fit-content: reduz a largura do h1 ao tamanho do conteudo ao inves de ocupar a largura inteira ja que o h1 eh um display block */
+    width: fit-content; 
+    /* sem margem vertical e com margem horizontal automatica, faz centralizar o bloco*/
+    margin: 0 auto;
+}
+
+#registers {
+    margin: 0 auto;
+    width: 700px;
+    padding: 80px;
+}
+
+#registers .register-container {
+    /* o height limita a altura da sessao e o overflow cria a barra de rolagem  */
+    height: 600px;
+    overflow-y: scroll;
+    /* afasta o conteiner de registros do h2 */
+    margin-top: 15px;
+}
+
+.register {
+    background-color: rgb(35,113,81);
+    /* margin da um espaço de 15px somente em cima e embaixo */
+    margin: 15px 0; 
+    border-radius: 15px;
+    /* padding afasta o texto da borda */
+    padding: 20px;
+    /* faz o botao ficar na posicao absoluta de forma relativa ao bloco de registro */
+    position: relative;
+}
+
+.register.income .amount {
+    color: chartreuse;
+}
+
+.register.expense .amount {
+    color: red;
+}
+
+/* pseudo-elemento, permite incluir informacoes dentro da tag com o ::before */
+.register.income .amount::before {
+    content: '+R$';
+}
+
+.register.expense .amount::before {
+    content: '-R$';
+}
+
+.register button {
+    position: absolute;
+    /* mesmo valor do padding do bloco de registro */
+    right: 20px;
+    top: 20px;
+    background: transparent;
+    color: rgb(210, 235, 225);
+    border: 1px solid rgb(210, 235, 225);
+    /* padding: espaçamento entre a borda e o texto */
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* transicao: o tempo que demora para trocar a estilizacao ao passar o mouse */
+    transition: background 0.2s, border 0.2s;
+}
+
+.register button:hover {
+    background-color: rgb(30, 38, 35);
+    border: 1px solid rgb(30, 38, 35);
+}
+
+/* pseudo seletor */
+.register button:nth-of-type(1) {
+    right: 80px;
+}
+
+footer {
+    background-color: black;
+    padding: 20px;
+}
+
+footer p {
+    /* centralizar o elemento no centro da pag */
+    margin: 0 auto;
+    width: fit-content;
+}
