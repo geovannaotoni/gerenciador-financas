@@ -28,38 +28,27 @@
                     <p>Descrição</p>
                     <button>Editar</button>
                     <button>Excluir</button>
-                </div>
-                <div class="register income">
-                    <span>19/01/2023</span>
-                    <p class="amount">8000,00</p>
-                    <p>Descrição</p>
-                    <button>Editar</button>
-                    <button>Excluir</button>
-                </div>
-                <div class="register expense">
-                    <span>19/01/2023</span>
-                    <p class="amount">5,00</p>
-                    <p>Descrição</p>
-                    <button>Editar</button>
-                    <button>Excluir</button>
-                </div>
-                <div class="register income">
-                    <span>19/01/2023</span>
-                    <p class="amount">8000,00</p>
-                    <p>Descrição</p>
-                    <button>Editar</button>
-                    <button>Excluir</button>
-                </div>
-                <div class="register expense">
-                    <span>19/01/2023</span>
-                    <p class="amount">5,00</p>
-                    <p>Descrição</p>
-                    <button>Editar</button>
-                    <button>Excluir</button>
-                </div>
+                </div>                
+                </div>            
             </div>
         </section>
     </main>
+    <form>
+        <label for="title">Título</label>
+        <input type="text" id="title">
+        <label for="description">Descrição</label>
+        <textarea id="description"></textarea>
+        <label for="date">Data</label>
+        <input type="text" id="date">
+        <label for="amount">Valor</label>
+        <input type="number" id="amount">
+        <label for="register-type">Tipo de registro</label>
+        <select id="register-type">
+          <option value="expense">Despesa</option>
+          <option value="income">Receita</option>
+        </select>
+        <button type="submit">Criar</button>
+      </form>
     <footer>
         <p>Finanças - Todos os direitos reservados</p>
     </footer>

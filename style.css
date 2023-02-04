@@ -94,6 +94,12 @@ header h1 {
     right: 80px;
 }
 
+form {
+    margin-bottom: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 footer {
     background-color: black;
     padding: 20px;
